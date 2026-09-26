@@ -1,0 +1,7 @@
+node_modules/
+*.log
+.DS_Store
+*.tmp
+# Exclude compiled OS binaries and frameworks
+DataShield Forensics.app/Contents/Frameworks/
+DataShield Forensics.app/Contents/MacOS/
