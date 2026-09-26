@@ -1,0 +1,17 @@
+{
+  "name": "datashield-forensics-app",
+  "version": "1.0.0",
+  "description": "DataShield Forensics Web Application",
+  "main": "api/index.js",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node DataShield Forensics.app/Contents/Resources/app/backend/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "multer": "^1.4.5-lts.1",
+    "pdfkit": "^0.16.0"
+  }
+}

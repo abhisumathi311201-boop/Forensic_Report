@@ -400,8 +400,13 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`[+] DataShield Forensics Backend Server running on http://localhost:${PORT}`);
-  console.log(`[+] Real OS Hardware Detection: ENABLED`);
-  console.log(`[+] Safe Demo Mode: ENABLED`);
-});
+if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`[+] DataShield Forensics Backend Server running on http://localhost:${PORT}`);
+    console.log(`[+] Real OS Hardware Detection: ENABLED`);
+    console.log(`[+] Safe Demo Mode: ENABLED`);
+  });
+}
+
+export default app;
+
